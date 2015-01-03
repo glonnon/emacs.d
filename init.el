@@ -40,7 +40,7 @@
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd \"M-.\") 'godef-jump)))
 
-(add-hook 'go-mode-hook auto-complete-mode)
+;(add-hook 'go-mode-hook auto-complete-mode)
 
 ; go-eldoc.el
 
