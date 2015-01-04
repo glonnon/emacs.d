@@ -1,5 +1,14 @@
 (setq inhibit-startup-message t) 
 
+; go-eldoc.el
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
+(package-refresh-contents)
+
+(require 'go-eldoc) ;; Don't need to require, if you install by package.el
+
 (add-to-list 'load-path "~/.emacs.d")
 
 ; to load path
@@ -42,14 +51,7 @@
 
 ;(add-hook 'go-mode-hook auto-complete-mode)
 
-; go-eldoc.el
 
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
-(package-refresh-contents)
-
-(require 'go-eldoc) ;; Don't need to require, if you install by package.el
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 
 
