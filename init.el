@@ -1,5 +1,11 @@
 (setq inhibit-startup-message t) 
 
+(add-to-list 'load-path "~/.emacs.d/lisp")
+
+; to load path
+(add-to-list 'load-path "~/.emacs.d/groovy-emacs-mode")
+
+
 ; go-eldoc.el
 
 (require 'package)
@@ -9,10 +15,7 @@
 
 (require 'go-eldoc) ;; Don't need to require, if you install by package.el
 
-(add-to-list 'load-path "~/.emacs.d")
 
-; to load path
-(add-to-list 'load-path "~/.emacs.d/groovy-emacs-mode")
 
 ;;; turn on syntax highlighting
 (global-font-lock-mode 1)
